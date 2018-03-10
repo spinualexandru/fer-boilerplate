@@ -70,20 +70,20 @@ app.get('/auth/slack', passport.authorize('slack'));
 app.get('/auth/slack/callback', function (req, res, next) {
 passport.authenticate('slack', function (err, user, info) {
 if (err) {
-    console.log(err);
-    return next(err);
+console.log(err);
+return next(err);
 }
 console.log(user);
 if (!user) {
-    return res.redirect('/auth/slack');
+return res.redirect('/auth/slack');
 }
 req.logIn(user, function (err) {
-    if (err) {
-        console.log(err);
-        return next(err);
-    }
-    console.log(user);
-    return res.redirect('http://localhost:3000/');
+if (err) {
+console.log(err);
+return next(err);
+}
+console.log(user);
+return res.redirect('http://localhost:3000/');
 });
 })(req, res, next)
 });
