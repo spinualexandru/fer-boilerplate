@@ -28,8 +28,8 @@
     app.use('/users', users);
   
     passport.use(new SlackStrategy({
-        clientID: "325200079718.324327765652",
-        clientSecret: "7517187be3c9a9ea19af3b26d728f053"
+        clientID: "$",
+        clientSecret: "$"
     }, (accessToken, scopes, team, extra, profiles, done) => {
 
         done(null, profiles.user);
