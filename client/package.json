@@ -16,6 +16,6 @@
     "react-scripts": "1.1.1",
     "react-semantic-ui": "^0.2.0",
     "session": "^0.1.0",
-    "underscore": "^1.8.3"
+    "underscore": "^1.12.1"
   }
 }
